@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dfbea417-e50b-4a90-849e-fbe5f080c381" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="dfbea417-e50b-4a90-849e-fbe5f080c381" name="Default Changelist" comment="Version 2.0.0:&#10;Feature to download historic ESG ratings was added.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/yesg-1.0.0.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/yesg-2.0.0.tar.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yesg/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/yesg/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yesg/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yesg.egg-info/PKG-INFO" beforeDir="false" afterPath="$PROJECT_DIR$/yesg.egg-info/PKG-INFO" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yesg/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/yesg/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,6 +133,14 @@
       <option name="presentableId" value="Default" />
       <updated>1622146709935</updated>
     </task>
+    <task id="LOCAL-00001" summary="Version 2.0.0:&#10;Feature to download historic ESG ratings was added.">
+      <created>1623410668708</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1623410668708</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -146,5 +154,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Version 2.0.0:&#10;Feature to download historic ESG ratings was added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 2.0.0:&#10;Feature to download historic ESG ratings was added." />
   </component>
 </project>
