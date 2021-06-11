@@ -21,7 +21,40 @@ import yesg
 ```
 
 
-Get ESG scores and sustainability data 
+Get historic ESG scores
+-----------------------
+To download all available historic ESG ratings for a company, simply use this:
+
+``` {.sourceCode .python}
+# All available historic ESG rating for THE BOEING COMPANY
+print(yesg.get_historic_esg('BA'))
+```
+
+```{r, engine='python', count_lines}
+OUTPUT:
+            Total-Score  E-Score  S-Score  G-Score
+Date                                              
+2014-09-01        60.00    64.00    51.00    64.00
+2014-10-01        60.00    64.00    51.00    64.00
+2014-11-01        60.00    64.00    51.00    64.00
+2014-12-01        60.00    64.00    51.00    64.00
+2015-01-01        62.00    69.00    54.00    64.00
+...                 ...      ...      ...      ...
+2021-01-01        36.25     7.79    19.66     8.81
+2021-02-01        36.25     7.79    19.66     8.81
+2021-03-01        36.25     7.79    19.66     8.81
+2021-04-01          NaN      NaN      NaN      NaN
+2021-05-01        36.61     8.15    19.66     8.81
+```
+
+**The rating methodology changed in November 2019**\
+Up until November 2019 a high score was given to a more sustainable companies.\
+After November 2019 the rating changed to a risk rating. A high ESG score signaled that a company has high ESG risk, 
+meaning that a more sustainable company has a low ESG score.
+
+
+
+Get current ESG scores and sustainability data 
 --------------------------------------
 To download all available sustainability information for a company, simply use this:
 
@@ -37,8 +70,8 @@ OUTPUT:
 ```
 
 
-Only get ESG scores 
---------------------------------------
+Only get current ESG scores 
+---------------------------
 To only download the quantitative ESG risk rating of a company, use can use this: 
 ``` {.sourceCode .python}
 # ESG risk rating from THE BOEING COMPANY
@@ -53,12 +86,20 @@ OUTPUT:
 
 
 Return description
------------------
+------------------
 
 Yahoo gets it data from Sustainalytics. They describe their ratings as follows: \
 *"The ESG Risk Ratings measure the degree to which a company’s economic value is at risk driven by ESG factors or, more technically speaking, the magnitude of a company’s unmanaged ESG risks. "*
 
 &rarr; **The lower the rating, the more sustainable a company is**
+
+\
+**The rating method changed in November 2019.** 
+
+&rarr; **Until November 2019: The high the rating, the more sustainable a company is** 
+
+
+
 
 The dataframe consists of:
 - **Ticker** - Ticker symbol of the company

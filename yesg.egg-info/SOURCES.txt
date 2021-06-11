@@ -4,7 +4,6 @@ setup.cfg
 setup.py
 yesg/__init__.py
 yesg/main.py
-yesg/test.py
 yesg.egg-info/PKG-INFO
 yesg.egg-info/SOURCES.txt
 yesg.egg-info/dependency_links.txt

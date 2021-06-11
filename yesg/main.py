@@ -2,15 +2,35 @@ import calendar
 import urllib.request
 import json
 import pandas as pd
+import requests
 
 
 # Downloads the numerical risk ratings of a company.
 def get_esg_short(ticker):
     return __get_esg_data(ticker, False)
 
+
 # Downloads the numerical risk ratings as well as all other available sustainability information about a company.
 def get_esg_full(ticker):
     return __get_esg_data(ticker, True)
+
+
+# Downloads historic ESG ratings and returns it as a dataframe
+def get_historic_esg(ticker):
+    response = requests.get('https://query2.finance.yahoo.com/v1/finance/esgChart', params={"symbol": ticker})
+
+    try:
+        df = pd.DataFrame(response.json()["esgChart"]["result"][0]["symbolSeries"])
+        df["Date"] = pd.to_datetime(df["timestamp"], unit="s")
+
+        df = df.rename(columns={"esgScore": "Total-Score", "environmentScore": "E-Score", "socialScore": "S-Score",
+                                "governanceScore": "G-Score"})
+
+        return df[['Date', 'Total-Score', 'E-Score', 'S-Score', 'G-Score']].set_index('Date')
+
+    except:
+        print('An error has occured. The ticker symbol might be wrong or you might need to wait to continue.')
+
 
 # Gets the actual information
 def __get_esg_data(ticker, full):

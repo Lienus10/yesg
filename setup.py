@@ -8,9 +8,9 @@ long_description = (here / 'README.md').read_text(encoding='utf-8')
 setup(
     name='yesg',
 
-    version='1.0.0',
+    version='2.0.0',
 
-    description='This module downloads esg scores for stocks from Yahoo Finance.',
+    description='This module downloads the latest and historic esg scores for stocks from Yahoo Finance.',
 
     long_description=long_description,
 
