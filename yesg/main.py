@@ -17,7 +17,11 @@ def get_esg_full(ticker):
 
 # Downloads historic ESG ratings and returns it as a dataframe
 def get_historic_esg(ticker):
-    response = requests.get('https://query2.finance.yahoo.com/v1/finance/esgChart', params={"symbol": ticker})
+    headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) '
+                             'Chrome/50.0.2661.102 Safari/537.36'}
+
+    response = requests.get('https://query2.finance.yahoo.com/v1/finance/esgChart', params={"symbol": ticker},
+                            headers=headers)
 
     try:
         df = pd.DataFrame(response.json()["esgChart"]["result"][0]["symbolSeries"])
@@ -29,7 +33,7 @@ def get_historic_esg(ticker):
         return df[['Date', 'Total-Score', 'E-Score', 'S-Score', 'G-Score']].set_index('Date')
 
     except:
-        print('An error has occured. The ticker symbol might be wrong or you might need to wait to continue.')
+        print('An error has occurred. The ticker symbol might be wrong or you might need to wait to continue.')
 
 
 # Gets the actual information

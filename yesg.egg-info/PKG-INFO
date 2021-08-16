@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: yesg
-Version: 2.1.0
+Version: 2.1.2
 Summary: This module downloads the latest and historic esg scores for stocks from Yahoo Finance.
 Home-page: https://github.com/Lienus10/yesg
 Author: Julius Langer
@@ -117,7 +117,7 @@ Yahoo gets it data from Sustainalytics. They describe their ratings as follows: 
 \
 **The rating method changed in November 2019.** 
 
-&rarr; **Until November 2019: The high the rating, the more sustainable a company is** 
+&rarr; **Until November 2019: The higher the rating the more sustainable the company is** 
 
 
 
